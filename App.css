@@ -1,59 +1,103 @@
 * {
   margin: 0;
+  box-sizing: border-box;
 }
 
 body {
-  background-color: #f5f6fa;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  min-height: 100vh;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
 }
 
 .app {
   display: flex;
   justify-content: space-evenly;
-  background-color: lightgray;
   padding: 20px;
+  max-width: 1400px;
+  margin: 0 auto;
+  gap: 20px;
 }
 
 .app__dropdown {
   background-color: white;
+  border-radius: 8px;
+  min-width: 200px;
+}
+
+.app__dropdown .MuiOutlinedInput-notchedOutline {
+  border-color: #e0e0e0;
 }
 
 .app__header {
   display: flex;
   align-items: center;
-  margin-bottom: 20px;
+  margin-bottom: 24px;
   justify-content: space-between;
+  background: white;
+  padding: 20px 24px;
+  border-radius: 16px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06);
 }
 
 .app__header > h1 {
-  color: #fc3c3c;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
   font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: -0.5px;
 }
 
 .app__stats {
   display: flex;
   justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 24px;
 }
 
 .app__left {
   flex: 0.9;
 }
 
+.app__right {
+  flex: 0.4;
+  border-radius: 16px !important;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -2px rgba(0, 0, 0, 0.05) !important;
+}
+
+.app__right .MuiCardContent-root {
+  padding: 24px !important;
+}
+
 .app__information > h3 {
-  color: #6a5d5d;
-  font-weight: 400;
-  font-size: 1.5rem;
+  color: #4a5568;
+  font-weight: 600;
+  font-size: 1.25rem;
   margin-bottom: 1rem;
+  letter-spacing: -0.3px;
 }
 
 .app__information > h3:last-of-type {
-  margin-top: 1rem;
+  margin-top: 2rem;
 }
 
 @media (max-width: 990px) {
   .app {
     flex-direction: column;
   }
-}
-.slika {
-  
+
+  .app__header {
+    flex-direction: column;
+    gap: 16px;
+    text-align: center;
+  }
+
+  .app__stats {
+    flex-direction: column;
+  }
 }
